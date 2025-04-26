@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption and Steganography</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 400px;
+            margin: auto;
+        }
+        label, input, textarea, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Encryption and Steganography</h1>
+    <form id="steganography-form">
+        <label for="text">Enter Text:</label>
+        <textarea id="text" name="text" rows="5" required></textarea>
+
+        <label for="shift">Enter Shift Key (Caesar Cipher):</label>
+        <input id="shift" name="shift" type="number" min="1" max="25" required>
+
+        <label for="image">Upload Image:</label>
+        <input id="image" name="image" type="file" accept="image/*" required>
+
+        <button type="submit">Encrypt and Hide</button>
+    </form>
+    <div id="result">
+        <h2>Result</h2>
+        <a id="download-link" style="display: none;" download="steganography_image.png">Download Image</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
